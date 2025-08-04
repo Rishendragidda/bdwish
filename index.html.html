@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Happy Birthday Nandhu 🎉</title>
+  <link rel="stylesheet" href="nandhu.css" />
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #ffeef8;
+      margin: 0;
+      padding: 0;
+    }
+
+    .card {
+      max-width: 500px;
+      margin: 4rem auto;
+      background: white;
+      border-radius: 20px;
+      padding: 2rem;
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      position: relative;
+    }
+
+    .image-frame {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 1.2rem;
+    }
+
+    .photo {
+      width: 180px;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 20px;
+      box-shadow: 0 0 20px rgba(255, 105, 180, 0.4);
+    }
+
+    h1 {
+      font-size: 1.8rem;
+      color: #d63384;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: 1rem;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    .bless-btn {
+      margin-top: 2rem;
+      padding: 0.7rem 1.5rem;
+      font-size: 1rem;
+      background-color: #ff66a6;
+      border: none;
+      color: white;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .bless-btn:hover {
+      background-color: #e05592;
+    }
+
+    .popup {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #fff8fc;
+      color: #d63384;
+      padding: 0.5rem 1rem;
+      border-radius: 10px;
+      box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+      opacity: 0;
+      font-size: 0.9rem;
+      pointer-events: none;
+      transition: all 0.4s ease-in-out;
+    }
+
+    .popup.show {
+      opacity: 1;
+      bottom: 40px;
+    }
+
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="circle-frame">
+  <img src="nadhini.png.jpg" alt="Nandhu's Photo" class="photo" />
+</div>
+
+    <h1>🎂 Happy Birthday Nandhu 🎉</h1>
+      <br><br>
+      From the very first time I saw you, you reminded me of my sister ,both of you radiate a soul so pure and pretty.
+Today, I wanted to wish you in the simplest yet most beautiful way I know  through this small creation of code and words.
+
+I adore your laughter, and even your silence carries a kind of calmness that stays with people.
+Hold on to that serenity. Keep smiling, keep glowing, and may success follow you in every step of your journey.
+
+💫 Wishing you a life full of joy, peace, and beautiful moments.
+Happiest Birthday, Nandhu! 🌸
+     
+      May this year bring you magical moments,laughter, and dreams come true.
+    </p>
+
+    <button class="bless-btn" onclick="showBlessing()">💫 Send Blessing</button>
+    <div id="blessMessage" class="popup hidden">💐Nuvu elapudu navuthane undalli Nandhu! Keep glowing just like your smile! , elanti situation aeina sarew peaceful ga handle chey✨</div>
+  </div>
+
+  <script>
+    function showBlessing() {
+      const msg = document.getElementById("blessMessage");
+      msg.classList.remove("hidden");
+      msg.classList.add("show");
+
+      setTimeout(() => {
+        msg.classList.remove("show");
+        msg.classList.add("hidden");
+      }, 3000); // Popup lasts for 3 seconds
+    }
+  </script>
+</body>
+</html>

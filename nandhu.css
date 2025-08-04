@@ -1,0 +1,120 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to right, #ffe6e6, #ffe0f0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.card {
+  background: #fff;
+  padding: 2.5rem;
+  border-radius: 2rem;
+  box-shadow: 0 0 30px rgba(255, 105, 180, 0.3);
+  text-align: center;
+  max-width: 600px;
+  animation: fadeIn 1.5s ease-in-out;
+  position: relative;
+}
+
+.image-frame {
+  width: 220px;
+  height: 220px;
+  margin: 0 auto 1.5rem;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 0 25px rgba(255, 105, 180, 0.4);
+  border: 6px solid white;
+  animation: float 4s ease-in-out infinite;
+}
+
+.circle-frame {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(255, 105, 180, 0.4);
+  border: 5px solid #fff0f8;
+  margin: 0 auto 1.5rem auto;
+}
+
+.photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+h1 {
+  font-size: 2rem;
+  color: #d63384;
+  margin-bottom: 1rem;
+  animation: popUp 1.2s ease-out;
+}
+
+p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #444;
+}
+
+.bless-btn {
+  margin-top: 1.5rem;
+  background: #ff66b2;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  font-size: 1rem;
+  border-radius: 1.5rem;
+  box-shadow: 0 8px 15px rgba(255, 105, 180, 0.3);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.bless-btn:hover {
+  background: #e60073;
+  transform: scale(1.05);
+}
+
+.popup {
+  background: #fff0f6;
+  color: #d63384;
+  padding: 1rem 1.2rem;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+  font-size: 1rem;
+  position: absolute;
+  bottom: -80px;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.4s ease-in-out;
+}
+
+.popup.show {
+  opacity: 1;
+  pointer-events: auto;
+  bottom: -60px;
+}
+
+.hidden {
+  display: none;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes popUp {
+  0% { transform: scale(0.8); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
